@@ -1,7 +1,7 @@
 const apple = {
     id: 'apple',
     name: 'Red Apple',
-    image: 'apple.png',
+    // image: 'apple.png',
     description: 'A sweet, delicious, forbidden-to-some treat',
     category: 'tree-fruit',
     price: 1.00,
@@ -10,7 +10,7 @@ const apple = {
 const banana = {
     id: 'banana',
     name: 'Banana',
-    image: 'banana.png',
+    // image: 'banana.png',
     description: 'Yellow and slippery',
     category: 'tropical',
     price: 1.04,
@@ -19,7 +19,7 @@ const banana = {
 const blueberry = {
     id: 'blueberry',
     name: 'Blueberry',
-    image: 'blueberry.png',
+    // image: 'blueberry.png',
     description: 'Little round blue gumballs',
     category: 'berry',
     price: 4.00,
@@ -28,7 +28,7 @@ const blueberry = {
 const cherry = {
     id: 'cherry',
     name: 'Cherry',
-    image: 'cherry.png',
+    // image: 'cherry.png',
     description: 'July favorite',
     category: 'tree-fruit',
     price: 4.00,
@@ -37,7 +37,7 @@ const cherry = {
 const greenApple = {
     id: 'green-apple',
     name: 'Green Apple',
-    image: 'green-apple.jpg',
+    // image: 'green-apple.jpg',
     description: 'What granny made pies from',
     category: 'tree-fruit',
     price: 1.34,
@@ -46,7 +46,7 @@ const greenApple = {
 const mango = {
     id: 'mango',
     name: 'Mango',
-    image: 'mango.png',
+    // image: 'mango.png',
     description: 'Rhymes with tango',
     category: 'In everything these days',
     price: 7.50,
@@ -55,7 +55,7 @@ const mango = {
 const orange = {
     id: 'orange',
     name: 'Orange',
-    image: 'orange.png',
+    // image: 'orange.png',
     description: 'Please peel before eating',
     category: 'tree-fruit',
     price: .76,
