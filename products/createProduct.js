@@ -21,8 +21,9 @@ function createProducts(product) {
     price.textContent = product.price.toFixed(2);
     desc.textContent = product.description;
 
-    // add product id to button
+    // add product id and display text to button
     button.id = product.id;
+    button.textContent = 'Add to cart';
 
     // append new elements to li
     li.appendChild(image);
