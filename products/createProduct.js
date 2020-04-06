@@ -18,7 +18,7 @@ function createProducts(product) {
 
     // populate text elements based on object values
     name.textContent = product.name;
-    price.textContent = product.price;
+    price.textContent = product.price.toFixed(2);
     desc.textContent = product.description;
 
     // add product id to button
