@@ -1,5 +1,5 @@
 // import fruits data
-import fruits from './fruits.js';
+import fruits from './products/products.js';
 
 // get elements from DOM
 const container = document.getElementById('fruits-container');
