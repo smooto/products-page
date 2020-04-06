@@ -1,73 +1,68 @@
-const apple = {
-    id: 'apple',
-    name: 'Red Apple',
-    // image: 'apple.png',
-    description: 'A sweet, delicious, forbidden-to-some treat',
-    category: 'tree-fruit',
-    price: 1.00,
-    cost: 0.25
+const P001 = {
+    id: 'P001',
+    name: 'Rose Quartz Water Bottle',
+    image: 'assets/rose-quartz-water.jpeg',
+    description: 'This water bottle will infuse your water with the healing power of rose quartz. Remember to stock up on Smoop triple-filtered water (sold separately)!',
+    category: 'wellness',
+    price: 84.00
 };
-const banana = {
-    id: 'banana',
-    name: 'Banana',
-    // image: 'banana.png',
-    description: 'Yellow and slippery',
-    category: 'tropical',
-    price: 1.04,
-    cost: 0.54
+const P002 = {
+    id: 'P002',
+    name: 'Rose Quartz Reusable Straw',
+    image: 'assets/rose-quartz-straw.jpeg',
+    description: 'Do your part to protect the environment, and sip your triple-filtered water through this gorgeous, reusable straw. As a bonus, the rose quartz embedded in the straw will infuse your beverages with healing energies. It\'s great for insides and outsides alike!',
+    category: 'wellness',
+    price: 60.00
 };
-const blueberry = {
-    id: 'blueberry',
-    name: 'Blueberry',
-    // image: 'blueberry.png',
-    description: 'Little round blue gumballs',
-    category: 'berry',
-    price: 4.00,
-    cost: 2.00
+const P003 = {
+    id: 'P003',
+    name: 'CBD Tincture',
+    image: 'assets/cbd-tincture.png',
+    description: 'This tincture is so good, who\'s to say it couldn\'t even cure cancer?',
+    category: 'healing',
+    price: 95.00
 };
-const cherry = {
-    id: 'cherry',
-    name: 'Cherry',
-    // image: 'cherry.png',
-    description: 'July favorite',
-    category: 'tree-fruit',
-    price: 4.00,
-    cost: 1.75
+const P004 = {
+    id: 'P004',
+    name: 'Detoxifying Candle',
+    image: 'assets/candle.jpg',
+    description: 'This therapeutic candle has been specially formulated to remove toxins from your envirnoment and bad vibes from your body.',
+    category: 'healing',
+    price: 35.00
 };
-const greenApple = {
-    id: 'green-apple',
-    name: 'Green Apple',
-    // image: 'green-apple.jpg',
-    description: 'What granny made pies from',
-    category: 'tree-fruit',
-    price: 1.34,
-    cost: .34
+const P005 = {
+    id: 'P005',
+    name: 'Tote Bag',
+    image: 'assets/tote.jpg',
+    description: 'This stylish branded tote will let everyone know you\'re a true Smooper. Yaaas, queen!',
+    category: 'fashion',
+    price: 18.00
 };
-const mango = {
-    id: 'mango',
-    name: 'Mango',
-    // image: 'mango.png',
-    description: 'Rhymes with tango',
-    category: 'In everything these days',
-    price: 7.50,
-    cost: .12
+const P006 = {
+    id: 'P006',
+    name: 'Product 6',
+    image: 'https://www.placecage.com/300/300',
+    description: 'TBD',
+    category: 'TBD',
+    price: 69.00
 };
-const orange = {
-    id: 'orange',
-    name: 'Orange',
-    // image: 'orange.png',
-    description: 'Please peel before eating',
-    category: 'tree-fruit',
-    price: .76,
-    cost: .75
+const P007 = {
+    id: 'P007',
+    name: 'Product 7',
+    image: 'https://www.placecage.com/300/300',
+    description: 'TBD',
+    category: 'TBD',
+    price: 420.00
 };
-const fruits = [
-    apple,
-    banana,
-    blueberry,
-    cherry,
-    greenApple,
-    mango,
-    orange
+
+const products = [
+    P001,
+    P002,
+    P003,
+    P004,
+    P005,
+    P006,
+    P007
 ];
-export default fruits;
+
+export default products;
