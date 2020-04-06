@@ -1,29 +1,16 @@
 // import fruits data
-import fruits from './products/products.js';
+import products from '/products/products.js';
+import createProduct from '/products/createProduct.js';
 
 // get elements from DOM
-const container = document.getElementById('fruits-container');
+const container = document.getElementById('products-container');
 
-// loop through array, create DOM elements
-
-function createFruits() {
-    fruits.forEach(fruit => {
-        const li = document.createElement('li');
-        const h3 = document.createElement('h3');
-        const p = document.createElement('p');
-
-        // populate html elements based on object values
-        h3.textContent = fruit.name;
-        p.textContent = fruit.description;
-
-        // append h3 and p to li
-        li.classList.add('fruit');
-        li.appendChild(h3);
-        li.appendChild(p);
-
-        // append li to div
+// render products on page
+function renderProducts(arrayOfProducts) {
+    arrayOfProducts.forEach(product => {
+        const li = createProduct(product);
         container.appendChild(li);
     });
 }
 
-createFruits();
+renderProducts(products);
