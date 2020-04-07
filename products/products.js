@@ -38,13 +38,22 @@ const P005 = {
     category: 'fashion',
     price: 18.00
 };
+const P006 = {
+    id: 'P006',
+    name: 'Smoop Artesianal Water',
+    image: 'assets/water.jpg',
+    description: 'Triple-filtered artesianal water, because municipal water is poison.',
+    category: 'wellness',
+    price: 10.00
+};
 
 const products = [
     P001,
     P002,
     P003,
     P004,
-    P005
+    P005,
+    P006
 ];
 
 export default products;
