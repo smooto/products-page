@@ -11,3 +11,8 @@ export function findById(array, itemId) {
 
     return foundItem;
 }
+
+export function calcLineItem(quantity, itemPrice) {
+    let lineCost = quantity * itemPrice;
+    return lineCost;
+}
