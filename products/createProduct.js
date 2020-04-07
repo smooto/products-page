@@ -9,9 +9,8 @@ function createProducts(product) {
     const desc = document.createElement('p');
     const button = document.createElement('button');
 
-    // add common product class to li, as well as class based on product category
-    li.classList.add('product');
-    li.classList.add(product.category);
+    // add common product class to li, as well as specific class based on product category
+    li.classList.add('product', product.category);
 
     // add extra class to desc, for styling
     desc.classList.add('product-desc');
