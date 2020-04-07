@@ -11,10 +11,7 @@ function createProducts(product) {
 
     // add common product class to li, as well as class based on product category
     li.classList.add('product');
-    li.classList.add(product.category);
-
-    // add extra class to desc, for styling
-    desc.classList.add('product-desc');
+    // li.classList.add(product.category);
 
     // route image source to appropriate file
     image.src = product.image;
