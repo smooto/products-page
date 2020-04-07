@@ -21,7 +21,7 @@ function createProducts(product) {
 
     // populate text elements based on object values
     name.textContent = product.name;
-    price.textContent = product.price.toFixed(2);
+    price.textContent = `$${product.price.toFixed(2)}`;
     desc.textContent = product.description;
 
     // add product id and display text to button
