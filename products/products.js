@@ -38,31 +38,13 @@ const P005 = {
     category: 'fashion',
     price: 18.00
 };
-const P006 = {
-    id: 'P006',
-    name: 'Product 6',
-    image: 'https://www.placecage.com/300/300',
-    description: 'TBD',
-    category: 'TBD',
-    price: 69.00
-};
-const P007 = {
-    id: 'P007',
-    name: 'Product 7',
-    image: 'https://www.placecage.com/300/300',
-    description: 'TBD',
-    category: 'TBD',
-    price: 420.00
-};
 
 const products = [
     P001,
     P002,
     P003,
     P004,
-    P005,
-    P006,
-    P007
+    P005
 ];
 
 export default products;

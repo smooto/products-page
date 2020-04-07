@@ -1,0 +1,48 @@
+#products-container {
+    margin: auto;
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-inline-start: 0;
+}
+
+h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.product {
+    width: 500px;
+    height: auto;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product img {
+    width: 300px;
+    height: auto;
+}
+
+.product h3, .product p, .product button {
+    margin: .5em 0;
+}
+
+.product-desc {
+    font-family: 'Playfair Display Italic';
+    color: gray;
+    text-align: center;
+}
+
+button {
+    font-family: 'Dosis';
+    color: black;
+    background-color: #FF9A8A;
+    border: 4px double black;
+    text-transform: uppercase;
+    padding: 10px;
+}
