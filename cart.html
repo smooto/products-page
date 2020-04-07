@@ -36,26 +36,23 @@
 
     <div id="page-wrapper">
         <h2>Shopping Cart</h2>
-        <table id="cart-table">
-            <tr id="header-row">
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Price</th>
-            </tr>
-            <tr>
-                <td>Rose Quartz Water Bottle</td>
-                <td>1</td>
-                <td>$84.00</td>
-            </tr>
-            <tr>
-                <td>Smoop Artesianal Water</td>
-                <td>3</td>
-                <td>$30.00</td>
-            </tr>
-            <tr id="footer-row">
-                <td id="total-cell" colspan="2">Cart total</td>
-                <td>$114.00</td>
-            </tr>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="cart-table">
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td id="total-label" colspan="2">Cart total</td>
+                    <td id="total-cost"></td>
+                </tr>
+            </tfoot>
         </table>
         <button id="checkout-button">Proceed to checkout</button>
     </div>
@@ -98,7 +95,7 @@
             2020 Smoop, Inc. All Rights Reserved.
         </p>
     </footer>
-
+    <script type="module" src="./shopping-cart/shopping-cart.js"></script>
 </body>
 
 </html>
