@@ -1,4 +1,5 @@
 import products from '../products/products.js';
+import cart from '../data/cart.js';
 import { findById, calcLineItem } from '../common/utils.js';
 
 const test = QUnit.test;
@@ -6,27 +7,37 @@ const test = QUnit.test;
 ///////////// findById tests
 
 test('findById - Rose Quartz Bottle', function(assert) {
-    // expected: db entry for Rose Quartz water bottle (id: 'P001')
+    ////// target product
     const id = 'P001';
-    const expected = products[0];
     
-    // actual: result of findById
-    const actual = findById(products, id);
+    ////// test A: pull from db
+    const expectedA = products[0];
+    const actualA = findById(products, id);
 
-    //Assert
-    assert.equal(actual, expected);
+    assert.equal(actualA, expectedA);
+
+    ////// test B: pull from cart
+    const expectedB = cart[0];
+    const actualB = findById(cart, id);
+
+    assert.equal(actualB, expectedB);
 });
 
 test('findById - Smoop Artesianal Water', function(assert) {
-    // expected: db entry for fancy water (id: 'P006')
+    ////// target product
     const id = 'P006';
-    const expected = products[5];
     
-    // actual: result of findById
-    const actual = findById(products, id);
+    ////// test A: pull from db
+    const expectedA = products[5];
+    const actualA = findById(products, id);
 
-    //Assert
-    assert.equal(actual, expected);
+    assert.equal(actualA, expectedA);
+
+    ////// test B: pull from cart
+    const expectedB = cart[1];
+    const actualB = findById(cart, id);
+
+    assert.equal(actualB, expectedB);
 });
 
 ///////////// calcLineItem tests
