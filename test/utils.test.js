@@ -81,11 +81,17 @@ test('calcLineItem - Smoop Artesianal Water', function(assert) {
 ///////////// calcOrderItem tests
 
 test('calcOrderItem test', function(assert) {
+    // dummy cart for testing
+    const testCart = [
+        { id: 'P001', quantity: 1 },
+        { id: 'P006', quantity: 3 }
+    ];
+    
     // expected output
     const expected = 114;
 
     // function call    
-    const actual = calcOrderItem(cart, products);
+    const actual = calcOrderItem(testCart, products);
 
     // assert
     assert.equal(actual, expected);
