@@ -7,6 +7,9 @@ _March 6 - 8, 2020_
 - Be mindful of function purity while TDDing
 - Upgrades/improvements:
     - Rethink directory structure/file placement
-    - Standardize naming conventions for JS files
     - Check relative linking conventions for consistency
     - Modularize CSS
+    - Reorganize JS modules
+        - _important: move and rename "app.js" (not common, only applies to products page)_
+        - Standardize naming conventions for JS files
+            - Datasets vs exported functions

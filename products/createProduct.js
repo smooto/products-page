@@ -1,4 +1,4 @@
-import addToCart from '../shopping-cart/addToCart.js';
+import addToCart from './addToCart.js';
 
 function createProducts(product) {
     // create new li
@@ -28,7 +28,9 @@ function createProducts(product) {
     // add product id, display text, and event listener to button
     button.id = product.id;
     button.textContent = 'Add to cart';
-    button.addEventListener('click', function(){addToCart(product);});
+    button.addEventListener('click', () => {
+        addToCart(product);
+    });
 
     // append new elements to li
     li.appendChild(image);
