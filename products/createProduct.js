@@ -1,3 +1,5 @@
+import addToCart from '../shopping-cart/addToCart.js';
+
 function createProducts(product) {
     // create new li
     const li = document.createElement('li');
@@ -23,9 +25,10 @@ function createProducts(product) {
     price.textContent = `$${product.price.toFixed(2)}`;
     desc.textContent = product.description;
 
-    // add product id and display text to button
+    // add product id, display text, and event listener to button
     button.id = product.id;
     button.textContent = 'Add to cart';
+    button.addEventListener('click', function(){addToCart(product);});
 
     // append new elements to li
     li.appendChild(image);
