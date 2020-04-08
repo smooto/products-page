@@ -188,6 +188,12 @@ button {
     margin-left: 100px;
 }
 
+#newsletter input {
+    border: 1px solid white;
+    padding: 1px;
+    font-family: 'Dosis';
+}
+
 #newsletter small {
     display: block;
     margin-top: .5em;
