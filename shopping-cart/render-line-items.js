@@ -13,7 +13,7 @@ function renderLineItems(lineItem, targetProduct) {
     // populate DOM elements with price data and line cost
     tdName.textContent = targetProduct.name;
     tdQuantity.textContent = lineItem.quantity;
-    tdCost.textContent = `$${lineCost}.00`;
+    tdCost.textContent = `$${lineCost.toFixed(2)}`;
 
     // append new elements to new row
     newRow.appendChild(tdName);

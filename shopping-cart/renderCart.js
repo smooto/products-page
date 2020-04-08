@@ -27,7 +27,7 @@ function renderCart(cartArray, productArray) {
     const orderCost = calcOrderItem(cartArray, productArray);
 
     // write orderCost to cell
-    costCell.textContent = `$${orderCost}.00`;
+    costCell.textContent = `$${orderCost.toFixed(2)}`;
 }
 
 export default renderCart;
