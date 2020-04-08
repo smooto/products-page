@@ -1,0 +1,34 @@
+h2 {
+    text-align: center;
+}
+
+table {
+    width: 50vw;
+    height: auto;
+    margin: 50px auto;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid black;
+    background-color: #FF9A8A;
+    font-weight: 600;
+    padding: 10px;
+}
+
+td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+#total-label {
+    text-align: right;
+    font-family: 'Playfair Display Italic';
+    border: 0px;
+}
+
+#checkout-button {
+    display: block;
+    margin: auto;
+}

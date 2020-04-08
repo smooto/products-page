@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/common/main.css">
-    <title>smoop | Goods for the Yaaas-est kweens.</title>
+    <link rel="stylesheet" href="/products/cart.css">
+    <title>smoop | Your shopping cart</title>
 </head>
 
 <body>
@@ -34,13 +35,26 @@
     </header>
 
     <div id="page-wrapper">
-        <section id="splash">
-            <!-- <img src="/assets/splash-image.jpg" class="image-cover" /> -->
-            <p>
-                Maximize your "yaaas."
-            </p>
-            <a href="./products.html">Shop now →</a>
-        </section>
+        <h2>Shopping Cart</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="cart-table">
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td id="total-label" colspan="2">Cart total</td>
+                    <td id="total-cost"></td>
+                </tr>
+            </tfoot>
+        </table>
+        <button id="checkout-button">Proceed to checkout</button>
     </div>
 
     <footer>
@@ -81,7 +95,7 @@
             2020 Smoop, Inc. All Rights Reserved.
         </p>
     </footer>
-
+    <script type="module" src="./shopping-cart/shopping-cart.js"></script>
 </body>
 
 </html>
