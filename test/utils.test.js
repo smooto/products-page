@@ -1,6 +1,6 @@
 import products from '../products/products.js';
 import cart from '../data/cart.js';
-import { findById, calcLineItem } from '../common/utils.js';
+import { findById, calcLineItem, calcOrderItem } from '../common/utils.js';
 
 const test = QUnit.test;
 
@@ -73,6 +73,19 @@ test('calcLineItem - Smoop Artesianal Water', function(assert) {
 
     // function call    
     const actual = calcLineItem(quantity, price);
+
+    // assert
+    assert.equal(actual, expected);
+});
+
+///////////// calcOrderItem tests
+
+test('calcOrderItem test', function(assert) {
+    // expected output
+    const expected = 114;
+
+    // function call    
+    const actual = calcOrderItem(cart, products);
 
     // assert
     assert.equal(actual, expected);
