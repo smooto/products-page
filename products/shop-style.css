@@ -38,6 +38,15 @@ h2 {
     text-align: center;
 }
 
+.product select {
+    font-family: 'Dosis';
+    margin: 10px 0;
+    padding: 10px;
+    background-color: white;
+    color: gray;
+    border: 1px solid gray;
+}
+
 .product button {
     font-family: 'Dosis';
     color: black;
