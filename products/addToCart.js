@@ -1,6 +1,6 @@
 import { findById } from '../common/utils.js';
 
-function addToCart(product) {
+function addToCart(product, quantitySelected) {
     // get cart item from localStorage
     let jsonCart = localStorage.getItem('cart');
     // init staging cart -- this "picks up" the item before it's put into the jsonCart
@@ -18,13 +18,13 @@ function addToCart(product) {
     if (!targetProduct) {
         const lineItem = {
             id: product.id,
-            quantity: 1 // each button click adds 1 item; this is the first of this item
+            quantity: quantitySelected
         };
         stagingCart.push(lineItem);
     }
-    // if line item does exist, increment value of existing quantity by 1
+    // if line item does exist, increment value of existing quantity by quantity selected
     else {
-        targetProduct.quantity++;
+        targetProduct.quantity += quantitySelected;
     }
 
     // set JSON cart to reflect (serialized) changes to staging cart

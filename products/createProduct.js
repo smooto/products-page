@@ -49,13 +49,12 @@ function createProducts(product) {
     price.textContent = `$${product.price.toFixed(2)}`;
     desc.textContent = product.description;
 
-    // 
-
     // add product id, display text, and event listener to button
     button.id = product.id;
     button.textContent = 'Add to cart';
     button.addEventListener('click', () => {
-        addToCart(product);
+        const quantitySelected = dropdown.value;
+        addToCart(product, quantitySelected);
         alert(`${product.name} added to cart!`);
     });
 
