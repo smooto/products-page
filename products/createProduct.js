@@ -53,9 +53,21 @@ function createProducts(product) {
     button.id = product.id;
     button.textContent = 'Add to cart';
     button.addEventListener('click', () => {
-        const quantitySelected = dropdown.value;
+        const quantitySelected = parseInt(dropdown.value);
         addToCart(product, quantitySelected);
-        alert(`${product.name} added to cart!`);
+
+        // show confirmation (with panache)
+        const confirmAdd = document.createElement('div');
+        // add styling class
+        confirmAdd.classList.add('confirm-cart-add');
+        li.appendChild(confirmAdd);
+
+        // trigger animation for confirmation, and populate text content
+        confirmAdd.classList.add('confirm-animated');
+        confirmAdd.textContent = `${quantitySelected} ${product.name} added to cart!`;
+
+        const restartAnim = confirmAdd.cloneNode(true);
+        li.replaceChild(restartAnim, confirmAdd);
     });
 
     ////// append new elements to li

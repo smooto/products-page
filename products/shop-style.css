@@ -1,3 +1,26 @@
+@keyframes confirm-add {
+    0% { height: 0em; opacity: 0; }
+    50% { height: 2em; opacity: 1; }
+    100% { height: 0em; opacity: 0; }
+}
+
+.confirm-animated {
+    animation: confirm-add 3s ease 0s 1 none;
+}
+
+.confirm-cart-add {
+    position: absolute;
+    opacity: 0;
+    /* top: 20px; */
+    margin: auto;
+    width: fit-content;
+    height: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.15em;
+    background-color: #FF9A8A;
+}
+
 #products-container {
     margin: auto;
     list-style: none;
