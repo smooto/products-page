@@ -57,7 +57,7 @@ function createProducts(product) {
         addToCart(product, quantitySelected);
 
         // show confirmation (with panache)
-        const confirmAdd = document.createElement('div');
+        const confirmAdd = document.createElement('p');
         // add styling class
         confirmAdd.classList.add('confirm-cart-add');
         li.appendChild(confirmAdd);

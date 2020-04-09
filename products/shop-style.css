@@ -1,7 +1,8 @@
 @keyframes confirm-add {
-    0% { height: 0em; opacity: 0; }
-    50% { height: 2em; opacity: 1; }
-    100% { height: 0em; opacity: 0; }
+    0% { opacity: 0; }
+    33% { opacity: 1; }
+    66% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 .confirm-animated {
@@ -11,10 +12,8 @@
 .confirm-cart-add {
     position: absolute;
     opacity: 0;
-    /* top: 20px; */
     margin: auto;
     width: fit-content;
-    height: 50px;
     padding: 20px;
     border-radius: 10px;
     font-size: 1.15em;
