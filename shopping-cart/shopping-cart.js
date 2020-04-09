@@ -1,5 +1,5 @@
 // import data
-import products from '../shop/products.js'; // product db
+import smoopProductList from '../data/product-db.js'; // product db
 
 // import functions
 import renderCart from './renderCart.js';
@@ -20,7 +20,7 @@ let currentCart = JSON.parse(jsonCart);
 if (jsonCart) {
     emptyCartMsg.classList.add('hidden');
     wholeTable.classList.remove('hidden');
-    renderCart(currentCart, products);
+    renderCart(currentCart, smoopProductList);
 }
 // otherwise, disable checkout button, hide table, & show "nothing in cart" text instead
 else {

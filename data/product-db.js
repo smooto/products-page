@@ -47,7 +47,7 @@ const P006 = {
     price: 10.00
 };
 
-const products = [
+const smoopProductList = [
     P001,
     P002,
     P003,
@@ -56,4 +56,4 @@ const products = [
     P006
 ];
 
-export default products;
+export default smoopProductList;
