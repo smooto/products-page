@@ -1,3 +1,25 @@
+@keyframes confirm-add {
+    0% { opacity: 0; }
+    33% { opacity: 1; }
+    66% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.confirm-animated {
+    animation: confirm-add 3s ease 0s 1 none;
+}
+
+.confirm-cart-add {
+    position: absolute;
+    opacity: 0;
+    margin: auto;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.15em;
+    background-color: #FF9A8A;
+}
+
 #products-container {
     margin: auto;
     list-style: none;
@@ -36,6 +58,15 @@ h2 {
     font-family: 'Playfair Display Italic';
     color: gray;
     text-align: center;
+}
+
+.product select {
+    font-family: 'Dosis';
+    margin: 10px 0;
+    padding: 10px;
+    background-color: white;
+    color: gray;
+    border: 1px solid gray;
 }
 
 .product button {

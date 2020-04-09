@@ -3,8 +3,8 @@ import { findById, calcOrderItem } from '../common/utils.js';
 
 function renderCart(cartArray, productArray) {
     ////// render line items w/ total line costs
-    // get table elements from DOM
-    const table = document.getElementById('cart-table');
+    // get tbody element from DOM
+    const tbody = document.getElementById('cart-table');
 
     // loop through cart
     cartArray.forEach(cartItem => {
@@ -14,9 +14,8 @@ function renderCart(cartArray, productArray) {
         // pass to DOM generator
         const newRow = renderLineItems(cartItem, targetProduct);
         
-        // append to table
-        // table.appendChild(newRow);
-        table.appendChild(newRow);
+        // append to tbody
+        tbody.appendChild(newRow);
     });
 
     ////// render total cost of order
