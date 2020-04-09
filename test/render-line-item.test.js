@@ -1,4 +1,4 @@
-import products from '../shop/products.js';
+import smoopProductList from '../data/product-db';
 import cart from '../data/cart.js';
 import { findById } from '../common/utils.js';
 import renderLineItems from '../shopping-cart/render-line-items.js';
@@ -10,7 +10,7 @@ test('renderLineItems - Rose Quartz Bottle', function(assert) {
     const lineItem = cart[0];
     
     // target product db entry: rose quartz bottle (P001)
-    const product = findById(products, lineItem.id);
+    const product = findById(smoopProductList, lineItem.id);
 
     // output: rendered Outer HTML
     const expected = `<tr><td>Rose Quartz Water Bottle</td><td>1</td><td>$84.00</td></tr>`;
@@ -27,7 +27,7 @@ test('renderLineItems - Smoop Artesianal Water', function(assert) {
     const lineItem = cart[1];
     
     // target product db entry: rose quartz bottle (P001)
-    const product = findById(products, lineItem.id);
+    const product = findById(smoopProductList, lineItem.id);
 
     // output: rendered Outer HTML
     const expected = `<tr><td>Smoop Artesianal Water</td><td>3</td><td>$30.00</td></tr>`;
