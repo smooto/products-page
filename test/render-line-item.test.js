@@ -1,4 +1,4 @@
-import smoopProductList from '../data/product-db';
+import smoopProductList from '../data/product-db.js';
 import cart from '../data/cart.js';
 import { findById } from '../common/utils.js';
 import renderLineItems from '../shopping-cart/render-line-items.js';
