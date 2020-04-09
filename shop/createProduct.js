@@ -1,4 +1,4 @@
-import addToCart from './addToCart.js';
+import { addToCart } from '../common/cart-api.js';
 
 function removeConfirmation(parentElement, divQuery) {
     let divToRemove = parentElement.querySelector(divQuery);

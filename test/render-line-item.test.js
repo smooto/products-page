@@ -1,4 +1,4 @@
-import products from '../products/products.js';
+import products from '../shop/products.js';
 import cart from '../data/cart.js';
 import { findById } from '../common/utils.js';
 import renderLineItems from '../shopping-cart/render-line-items.js';

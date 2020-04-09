@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
-import products from '../products/products.js';
-import createProducts from '../products/createProduct.js';
+import products from '../shop/products.js';
+import createProducts from '../shop/createProduct.js';
 
 const test = QUnit.test;
 

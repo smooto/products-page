@@ -1,5 +1,5 @@
 // import data
-import products from '../products/products.js'; // product db
+import products from '../shop/products.js'; // product db
 
 // import functions
 import renderCart from './renderCart.js';

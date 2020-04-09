@@ -1,4 +1,4 @@
-import products from '../products/products.js';
+import products from '../shop/products.js';
 import cart from '../data/cart.js';
 import { findById, calcLineItem, calcOrderItem } from '../common/utils.js';
 

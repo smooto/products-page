@@ -1,6 +1,6 @@
 // import product data
-import products from '../products/products.js';
-import renderProducts from '../products/render-products.js';
+import products from './products.js';
+import renderProducts from './render-products.js';
 
 // get container from DOM
 const container = document.getElementById('products-container');

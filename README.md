@@ -2,6 +2,17 @@
 
 _March 6 - 8, 2020_
 
+## Structure
+
+```
+shop.html
+|-- shop-style.css
+|-- shop-app.js
+    |-- render-products.js (combines li outputs from createProduct)
+        |-- createProduct.js (generates individual li outputs for each product)
+        
+```
+
 ## Notes
 
 - Be mindful of function purity while TDDing
