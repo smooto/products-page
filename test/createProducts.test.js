@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import smoopProductList from '../data/product-db.js';
-import createProducts from '../shop/createProduct.js';
+import createProducts from '../shop/create-product.js';
 
 const test = QUnit.test;
 

@@ -1,4 +1,4 @@
-import createProduct from './createProduct.js';
+import createProduct from './create-product.js';
 
 function renderProducts(arrayOfProducts, container) {
     arrayOfProducts.forEach(product => {

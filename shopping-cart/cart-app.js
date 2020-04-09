@@ -2,7 +2,7 @@
 import smoopProductList from '../data/product-db.js'; // product db
 
 // import functions
-import renderCart from './renderCart.js';
+import renderCart from './render-cart.js';
 import { getCart } from '../common/cart-api.js';
 
 // get DOM elements
