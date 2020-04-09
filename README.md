@@ -6,6 +6,7 @@ _March 6 - 8, 2020_
 
 - Be mindful of function purity while TDDing
 - Upgrades/improvements:
+    - **Easy:** add function to clear out cart
     - Rethink directory structure/file placement
     - Check relative linking conventions for consistency
     - Modularize CSS
@@ -13,4 +14,6 @@ _March 6 - 8, 2020_
         - _important: move and rename "app.js" (not common, only applies to products page)_
         - Standardize naming conventions for JS files
             - Datasets vs exported functions
-    - figure out how to make cart-confirmation animation work without creating so many extraneous new elements
+        - Pull out `select` & `option` functionality into a module, def have ideas but too tired atm
+    - Accessibility
+        - Specifically: how is cart-confirm functionality processed by screen-readers?

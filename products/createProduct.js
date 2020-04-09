@@ -1,14 +1,18 @@
 import addToCart from './addToCart.js';
 
-function confirmCart(quantitySelected, product) {
-    // create & append element
+function removeConfirmation(parentElement, divQuery) {
+    let divToRemove = parentElement.querySelector(divQuery);
+
+    if (divToRemove) { parentElement.removeChild(divToRemove); }
+}
+
+function createConfirmation(quantitySelected, product) {
+    // create element
     const newDiv = document.createElement('div');
-    // parentElem.appendChild(confirmAdd);
 
     // populate text content based on quantity
     let productName = product.name;
     if (quantitySelected > 1) { productName += 's'; }
-
     newDiv.textContent = `${quantitySelected} ${productName} added to cart!`;
 
     // add class for styling purposes
@@ -17,24 +21,38 @@ function confirmCart(quantitySelected, product) {
     // add class for one-time animation
     newDiv.classList.add('confirm-animated');
 
+    // return confirmation div, to be appended to parent element
     return newDiv;
 }
 
 function createProducts(product) {
-    ////// create elements to be populated from product data
+    ////// first, create elements to be populated from product data
     
-    // init li
+    //// init parent element
     const li = document.createElement('li');
     
-    // product info elements
+    //// product info elements
     const image = document.createElement('img');
-    const name = document.createElement('h3');
-    const price = document.createElement('p');
-    const desc = document.createElement('p');
+    li.appendChild(image);
 
-    // user input elements
+    const name = document.createElement('h3');
+    li.appendChild(name);
+    
+    const price = document.createElement('p');
+    li.appendChild(price);
+    
+    const desc = document.createElement('p');
+    li.appendChild(desc);
+
+    //// user input elements
+
+    // we're creating two kinds of user inputs for each product:
+    // - a dropdown menu that allows the user to choose the amount of the product to add to the cart
+    // - a button that will add the selected quantity of items to the cart
+
+    // the dropdown consists of a `select` element with several `option` elements as children
     const dropdown = document.createElement('select');
-    const button = document.createElement('button');
+    li.appendChild(dropdown);
 
     // define options for dropdown
     const quantOptions = [
@@ -45,6 +63,7 @@ function createProducts(product) {
         { element: 'option', value: 5, text: 5 }
     ];
 
+    // create a DOM element for each option, and add each of those elements as a child of the dropdown element
     quantOptions.forEach(option => {
         const renderedOption = document.createElement(option.element);
         renderedOption.value = option.value;
@@ -52,6 +71,11 @@ function createProducts(product) {
 
         dropdown.appendChild(renderedOption);
     });
+
+    //// button!!!!!
+
+    const button = document.createElement('button');
+    li.appendChild(button);
 
     ////// set element properties/values
 
@@ -73,37 +97,32 @@ function createProducts(product) {
     button.id = product.id;
     button.textContent = 'Add to cart';
     button.addEventListener('click', () => {
-        const quantitySelected = parseInt(dropdown.value);
-        addToCart(product, quantitySelected);
+        // we want these things to happen on click:
+        // - retrieve and utilize the user's selected quantity
+        // - add selected amount of target item to local storage
+        // - update UI in some way to notify user that the addition was successful
 
+        const quantitySelected = parseInt(dropdown.value); // default `option` values are strings, need to be numberized for this
+        addToCart(product, quantitySelected);
 
         ////// cart-confirmation (with panache)
 
-        // in order to replay CSS animation with non-infinite iteration count, the whole element has to be re-initialized. in this case, we want to re-init on each "add to cart" click.
+        // the goal here is to replace the outmoded `alert()` with something a little bit nicer -- a notification that fades in, displays briefly, then fades back out. this animation should re-render on every click.
+
+        // in order to replay CSS animations with non-infinite iteration counts, the whole element has to be re-initialized. in this case, we want to re-init on each "add to cart" click.
         // however, we also don't want to bog down the rendered HTML too many extraneous divs.
         
-        // so, let's first check for any existing confirmation divs, and if we find one, remove it from the parent element before generating another one.
+        // so, let's first check the parent element for any existing confirmation divs, and if we find one, remove it from the parent element before generating another one.
 
-        let divToRemove = li.querySelector('.confirm-animated');
-
-        if (divToRemove) { li.removeChild(divToRemove); }
-        else { divToRemove = null; }
+        removeConfirmation(li, '.confirm-animated');
 
         // then, we can continue on to generate the new div, and append it to the parent element.
 
-        const confirmDiv = confirmCart(quantitySelected, product);
+        const confirmDiv = createConfirmation(quantitySelected, product);
         li.appendChild(confirmDiv);
     });
 
-    ////// append new elements to li
-    li.appendChild(image);
-    li.appendChild(name);
-    li.appendChild(price);
-    li.appendChild(desc);
-    li.appendChild(dropdown);
-    li.appendChild(button);
-    
-    // return li
+    // return parent element, to be eaten by some other thing
     return li;
 }
 
