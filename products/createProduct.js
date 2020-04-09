@@ -1,5 +1,25 @@
 import addToCart from './addToCart.js';
 
+function confirmCart(quantitySelected, product) {
+    // create & append element
+    const newDiv = document.createElement('div');
+    // parentElem.appendChild(confirmAdd);
+
+    // populate text content based on quantity
+    let productName = product.name;
+    if (quantitySelected > 1) { productName += 's'; }
+
+    newDiv.textContent = `${quantitySelected} ${productName} added to cart!`;
+
+    // add class for styling purposes
+    newDiv.classList.add('confirm-cart-add');
+
+    // add class for one-time animation
+    newDiv.classList.add('confirm-animated');
+
+    return newDiv;
+}
+
 function createProducts(product) {
     ////// create elements to be populated from product data
     
@@ -56,18 +76,23 @@ function createProducts(product) {
         const quantitySelected = parseInt(dropdown.value);
         addToCart(product, quantitySelected);
 
-        // show confirmation (with panache)
-        const confirmAdd = document.createElement('p');
-        // add styling class
-        confirmAdd.classList.add('confirm-cart-add');
-        li.appendChild(confirmAdd);
 
-        // trigger animation for confirmation, and populate text content
-        confirmAdd.classList.add('confirm-animated');
-        confirmAdd.textContent = `${quantitySelected} ${product.name} added to cart!`;
+        ////// cart-confirmation (with panache)
 
-        const restartAnim = confirmAdd.cloneNode(true);
-        li.replaceChild(restartAnim, confirmAdd);
+        // in order to replay CSS animation with non-infinite iteration count, the whole element has to be re-initialized. in this case, we want to re-init on each "add to cart" click.
+        // however, we also don't want to bog down the rendered HTML too many extraneous divs.
+        
+        // so, let's first check for any existing confirmation divs, and if we find one, remove it from the parent element before generating another one.
+
+        let divToRemove = li.querySelector('.confirm-animated');
+
+        if (divToRemove) { li.removeChild(divToRemove); }
+        else { divToRemove = null; }
+
+        // then, we can continue on to generate the new div, and append it to the parent element.
+
+        const confirmDiv = confirmCart(quantitySelected, product);
+        li.appendChild(confirmDiv);
     });
 
     ////// append new elements to li
