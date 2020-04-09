@@ -28,3 +28,12 @@ else {
     wholeTable.classList.add('hidden');
     checkoutButton.disabled = true;
 }
+
+// add functionality for checkout button
+
+checkoutButton.addEventListener('click', () => {
+    const cartContents = JSON.stringify(currentCart, true, 2);
+    alert(cartContents);
+    localStorage.removeItem('cart');
+    window.location.href = '/';
+});
