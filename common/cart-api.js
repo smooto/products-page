@@ -1,5 +1,16 @@
 import { findById } from '../common/utils.js';
 
+export function getCart() {
+    // retrieve cart data from local storage
+    let jsonCart = localStorage.getItem('cart');
+
+    // parse cart data
+    let currentCart = JSON.parse(jsonCart);
+
+    return currentCart;
+}
+
+
 export function addToCart(product, quantitySelected) {
     // get cart item from localStorage
     let jsonCart = localStorage.getItem('cart');

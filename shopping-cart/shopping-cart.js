@@ -3,21 +3,19 @@ import smoopProductList from '../data/product-db.js'; // product db
 
 // import functions
 import renderCart from './renderCart.js';
+import { getCart } from '../common/cart-api.js';
 
 // get DOM elements
 const emptyCartMsg = document.getElementById('nothing-in-cart');
 const wholeTable = document.getElementById('whole-table');
 const checkoutButton = document.getElementById('checkout-button');
 
-// retrieve cart data from local storage
-let jsonCart = localStorage.getItem('cart');
-
-// parse cart data
-let currentCart = JSON.parse(jsonCart);
+// get current cart from local storage
+let currentCart = getCart();
 
 // determine whether json cart contains any items
 // if so, render and display cart table
-if (jsonCart) {
+if (currentCart) {
     emptyCartMsg.classList.add('hidden');
     wholeTable.classList.remove('hidden');
     renderCart(currentCart, smoopProductList);
