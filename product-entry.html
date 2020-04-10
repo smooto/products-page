@@ -23,29 +23,29 @@
         <form id="new-product-form">
             <label>
                 Reference ID:
-                <input type="text" id="id" />
+                <input id="id" name="id" />
             </label>
             <label>
                 Name:
-                <input type="text" id="name" />
+                <input id="name" name="name" />
             </label>
             <label>
                 Image:
-                <input type="text" id="image" />
+                <input id="image" name="image" />
             </label>
             <label>
                 Description:
-                <input type="text" id="description" />
+                <input id="description" name="description" />
             </label>
             <label>
                 Category:
-                <input type="text" id="category" />
+                <input id="category" name="category" />
             </label>
             <label>
                 Price:
-                <input type="text" id="price" />
+                <input id="price" name="price" />
             </label>
-            <input type="submit" value="Submit Product" id="submit-button">
+            <button>Submit product</button>
         </form>
     </div>
 
@@ -87,5 +87,7 @@
             2020 Smoop, Inc. All Rights Reserved.
         </p>
     </footer>
+
+    <script type="module" src="./product-entry/product-entry-app.js"></script>
 </body>
 </html>
