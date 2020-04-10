@@ -20,8 +20,9 @@ newProductForm.addEventListener('submit', (e) => {
         cost: productData.get('cost')
     };
 
-    console.log(newProductObject);
-
     // add new object to product list
     addProduct(newProductObject);
+
+    // clear form
+    newProductForm.reset();
 });
