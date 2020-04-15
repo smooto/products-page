@@ -1,4 +1,4 @@
-import products from '../products/products.js';
+import smoopProductList from '../data/product-db.js';
 import cart from '../data/cart.js';
 import { findById, calcLineItem, calcOrderItem } from '../common/utils.js';
 
@@ -11,8 +11,8 @@ test('findById - Rose Quartz Bottle', function(assert) {
     const id = 'P001';
     
     ////// test A: pull from db
-    const expectedA = products[0];
-    const actualA = findById(products, id);
+    const expectedA = smoopProductList[0];
+    const actualA = findById(smoopProductList, id);
 
     assert.equal(actualA, expectedA);
 
@@ -28,8 +28,8 @@ test('findById - Smoop Artesianal Water', function(assert) {
     const id = 'P006';
     
     ////// test A: pull from db
-    const expectedA = products[5];
-    const actualA = findById(products, id);
+    const expectedA = smoopProductList[5];
+    const actualA = findById(smoopProductList, id);
 
     assert.equal(actualA, expectedA);
 
@@ -44,7 +44,7 @@ test('findById - Smoop Artesianal Water', function(assert) {
 
 test('calcLineItem - Rose Quartz Bottle', function(assert) {
     // array element to be tested
-    const element = products[0];
+    const element = smoopProductList[0];
     
     // parameters
     const quantity = 1;
@@ -62,7 +62,7 @@ test('calcLineItem - Rose Quartz Bottle', function(assert) {
 
 test('calcLineItem - Smoop Artesianal Water', function(assert) {
     // array element to be tested
-    const element = products[5];
+    const element = smoopProductList[5];
     
     // parameters
     const quantity = 3;
@@ -91,7 +91,7 @@ test('calcOrderItem test', function(assert) {
     const expected = 114;
 
     // function call    
-    const actual = calcOrderItem(testCart, products);
+    const actual = calcOrderItem(testCart, smoopProductList);
 
     // assert
     assert.equal(actual, expected);

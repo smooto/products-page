@@ -1,6 +1,17 @@
 import { findById } from '../common/utils.js';
 
-function addToCart(product, quantitySelected) {
+export function getCart() {
+    // retrieve cart data from local storage
+    let jsonCart = localStorage.getItem('cart');
+
+    // parse cart data
+    let currentCart = JSON.parse(jsonCart);
+
+    return currentCart;
+}
+
+
+export function addToCart(product, quantitySelected) {
     // get cart item from localStorage
     let jsonCart = localStorage.getItem('cart');
     // init staging cart -- this "picks up" the item before it's put into the jsonCart
@@ -32,5 +43,3 @@ function addToCart(product, quantitySelected) {
     // set localStorage cart item value to updated array
     localStorage.setItem('cart', jsonCart);
 }
-
-export default addToCart;

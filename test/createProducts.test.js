@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
-import products from '../products/products.js';
-import createProducts from '../products/createProduct.js';
+import smoopProductList from '../data/product-db.js';
+import createProducts from '../shop/create-product.js';
 
 const test = QUnit.test;
 
@@ -11,7 +11,7 @@ test('createProducts', function(assert) {
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = createProducts(products[0]).outerHTML;
+    const actual = createProducts(smoopProductList[0]).outerHTML;
 
     //Assert
     // Make assertions about what is expected valid result

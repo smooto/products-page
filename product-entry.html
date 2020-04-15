@@ -1,68 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/common/main.css">
-    <link rel="stylesheet" href="/shopping-cart/cart.css">
-    <title>smoop | Your shopping cart</title>
+    <title>smoop Admin | Add new product</title>
 </head>
-
 <body>
     <header>
         <h1>Smoop</h1>
         <nav>
             <ul>
                 <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/shop.html">Shop</a>
-                </li>
-                <li>
-                    <a href="#">Events</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="/cart.html">Cart</a>
+                    Admin Mode
                 </li>
             </ul>
         </nav>
     </header>
-
+    
     <div id="page-wrapper">
-        <h2>Shopping Cart</h2>
-        <div id="nothing-in-cart">
-            <p>
-                You haven't added anything to your cart yet!
-            </p>
-            <p>
-                Why don't you treat yourself to some of our fine <a href="./shop.html">products</a>? You've earned it!
-            </p>
-        </div>
-        <table id="whole-table">
-            <thead>
-                <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody id="cart-table">
-
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td id="total-label" colspan="2">Cart total</td>
-                    <td id="total-cost"></td>
-                </tr>
-            </tfoot>
-        </table>
-        <button id="checkout-button">Proceed to checkout</button>
+        <h2>Add a new product</h2>
+        <form id="new-product-form">
+            <label>
+                Reference ID:
+                <input id="id" name="id" />
+            </label>
+            <label>
+                Name:
+                <input id="name" name="name" />
+            </label>
+            <label>
+                Image:
+                <input id="image" name="image" />
+            </label>
+            <label>
+                Description:
+                <input id="description" name="description" />
+            </label>
+            <label>
+                Category:
+                <input id="category" name="category" />
+            </label>
+            <label>
+                Price:
+                <input id="price" name="price" />
+            </label>
+            <button>Submit product</button>
+        </form>
     </div>
 
     <footer>
@@ -103,7 +87,7 @@
             2020 Smoop, Inc. All Rights Reserved.
         </p>
     </footer>
-    <script type="module" src="./shopping-cart/cart-app.js"></script>
-</body>
 
+    <script type="module" src="./product-entry/product-entry-app.js"></script>
+</body>
 </html>
