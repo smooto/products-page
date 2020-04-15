@@ -8,17 +8,17 @@
 
 @font-face {
     font-family: 'Playfair Display';
-    src: url('/assets/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+    src: url('./assets/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Playfair Display Italic';
-    src: url('/assets/fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+    src: url('./assets/fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Dosis';
-    src: url('/assets/fonts/Dosis/Dosis-VariableFont_wght.ttf') format('truetype');
+    src: url('./assets/fonts/Dosis/Dosis-VariableFont_wght.ttf') format('truetype');
 }
 
 * {
@@ -108,7 +108,7 @@ header nav a:hover {
     width: 75vw;
     height: 50vh;
     margin: auto;
-    background-image: url('/assets/splash-image.jpg');
+    background-image: url('./assets/splash-image.jpg');
     background-position: 25% 50%;
     background-size: 150%;
     background-repeat: no-repeat;
